@@ -56,6 +56,7 @@ class Dog
     dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, breed).flatten
     if !dog.empty?
       dog_info = dog
+      dog = Dog.new(dog_info[0],dog_info[1],dog_info[2])
   end
 
 

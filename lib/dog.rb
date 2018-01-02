@@ -3,6 +3,9 @@ class Dog
   attr_reader :id
 
   def initialize(hash)
+    hash.each do |key, value|
+      send("#{key}=", value)
+    end
     @name = name
     @breed = breed
     @id = nil

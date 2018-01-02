@@ -38,7 +38,8 @@ class Dog
   end
 
   def self.create(hash)
-    new_dog = Dog.new(name:, breed:)
+    hash.each do |key, value|
+      new_dog = Dog.new("#{key}"=, value)
     new_dog.save
   end
 

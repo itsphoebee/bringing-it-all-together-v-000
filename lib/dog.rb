@@ -39,7 +39,7 @@ class Dog
 
   def self.create(hash)
     hash.each do |key, value|
-      new_dog = Dog.new(send("#{key}=",value)
+      new_dog = Dog.new(send("#{key}=",value))
     end
   end
 

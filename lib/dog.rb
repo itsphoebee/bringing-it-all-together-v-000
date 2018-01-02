@@ -42,6 +42,9 @@ class Dog
     new_dog.save
   end
 
+  def self.new_from_db
+  end
+
   def self.find_by_id(id)
     sql = <<-SQL
     SELECT *
@@ -55,7 +58,10 @@ class Dog
     end.first
   end
 
-    def
+  def self.find_or_create_by
+  end
+
+
 
   end
 

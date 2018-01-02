@@ -41,6 +41,7 @@ class Dog
     hash.each do |key, value|
       new_dog = Dog.new("#{key}"=, value)
       new_dog.save
+    end
   end
 
 end

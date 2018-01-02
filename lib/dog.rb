@@ -23,6 +23,8 @@ class Dog
     DB[:conn].execute("DROP TABLE dogs")
   end
 
+  def save
+  end
   def self.create(hash)
     new_dog = Dog.new(name:, breed:)
   end

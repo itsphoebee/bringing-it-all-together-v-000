@@ -47,14 +47,7 @@ class Dog
   end
 
   def self.find_by_id(id)
-    sql = <<-SQL
-    SELECT *
-    FROM dogs
-    WHERE id = ?
-    LIMIT 1
-    SQL
-
-    DB[:conn].execute(sql,id).map do |row|
+    DB[:conn].execute("SELECT * FROM dogs WHERE id = ? LIMIT 1",id).map do |row|
       self.new_from_db(row)
     end.first
   end

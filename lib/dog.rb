@@ -1,6 +1,5 @@
 class Dog
-  attr_accessor :name, :breed
-  attr_reader :id
+  attr_accessor :name, :breed, :id
 
   def initialize(hash)
     hash.each do |key, value|

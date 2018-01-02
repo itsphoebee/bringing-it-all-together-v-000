@@ -57,6 +57,8 @@ class Dog
     if !dog.empty?
       dog_info = dog
       dog = Dog.new(dog_info[0],dog_info[1],dog_info[2])
+    else
+      dog = self.create(name: name, breed: breed)
   end
 
 
